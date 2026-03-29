@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IslandLetters.com — Coming Soon</title>
+  <meta name="description" content="IslandLetters.com — Coming Soon" />
+  <style>
+    :root{
+      --sky-1: #0b3d91;    /* deep ocean blue */
+      --sky-2: #1e7bbf;    /* brighter blue (used less) */
+
+      --warm-1:#f39a44;    /* orange sand */
+      --warm-2:#d65a2f;    /* orange-red */
+      --warm-3:#9f1f2d;    /* deeper red at the bottom */
+
+      --ink:   #0b1220;
+      --paper: rgba(255,255,255,.86);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--ink);
+      min-height:100svh;
+      display:grid;
+      place-items:center;
+
+      background:
+        radial-gradient(1100px 360px at 22% 0%, rgba(255,255,255,.18), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg,
+          var(--sky-1) 0%,
+          var(--sky-2) 18%,
+          var(--warm-1) 45%,
+          var(--warm-2) 72%,
+          var(--warm-3) 100%
+        );
+    }
+
+    .shell{
+      width:min(980px, calc(100% - 2rem));
+      padding: 2.25rem 1.25rem 2.5rem;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 1.1rem 1rem 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .banner{
+      color: rgba(255,255,255,.95);
+      text-align:center;
+      line-height:1.05;
+      letter-spacing:.02em;
+      text-shadow: 0 2px 18px rgba(0,0,0,.35);
+      user-select:none;
+    }
+    .banner .title{
+      font-weight: 800;
+      font-size: clamp(2.1rem, 4.8vw, 3.6rem);
+    }
+    .banner .tagline{
+      margin-top:.35rem;
+      font-weight: 500;
+      font-size: clamp(.98rem, 1.6vw, 1.15rem);
+      opacity:.92;
+    }
+
+    main{
+      display:grid;
+      gap: 1rem;
+      justify-items:center;
+    }
+
+    .card{
+      width:min(720px, 100%);
+      background: var(--paper);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem 1.1rem;
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+    }
+
+    h1{
+      margin:0 0 .35rem 0;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+    }
+    p{
+      margin:.35rem 0;
+      font-size: 1.05rem;
+      line-height:1.55;
+    }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(0,0,0,.18), transparent);
+      margin: .9rem 0;
+    }
+
+    footer{
+      margin-top: 1.35rem;
+      text-align:center;
+      color: rgba(255,255,255,.88);
+      text-shadow: 0 2px 14px rgba(0,0,0,.28);
+      font-size:.95rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+    <header>
+      <div class="banner" aria-label="IslandLetters.com">
+        <div class="title">IslandLetters.com</div>
+        <div class="tagline">A family letter archive from Canada’s Maritimes</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h1>Coming Soon</h1>
+        <p>
+          We’re building a searchable archive of extended family letters spanning ~150 years.
+        </p>
+        <div class="divider"></div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="y"></span> IslandLetters.com
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
