@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ned (E.A.) Harris — IslandLetters.com</title>
+  <meta name="description" content="Letters by Ned (E.A.) Harris on IslandLetters.com." />
+  <style>
+    :root{
+      --ink: #0b1220;
+      --paper: rgba(255,255,255,.86);
+      --paper-strong: rgba(255,255,255,.92);
+      --shadow: rgba(0,0,0,.25);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      min-height:100svh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--ink);
+
+      background-image: url("images/background.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .overlay{
+      min-height:100svh;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.15) 35%, rgba(0,0,0,.35) 100%);
+      display:flex;
+      justify-content:center;
+    }
+
+    .shell{
+      width:min(980px, calc(100% - 2rem));
+      padding: 2rem 1rem 3rem;
+    }
+
+    header{
+      text-align:center;
+      padding: 1.5rem 1rem 1.25rem;
+      border-radius: 18px;
+      background: rgba(12, 33, 74, .35);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 18px 60px var(--shadow);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .site-title{
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: .02em;
+      line-height: 1.05;
+      color: rgba(255,255,255,.96);
+      text-shadow: 0 2px 18px rgba(0,0,0,.45);
+      font-size: clamp(2.0rem, 4.8vw, 3.3rem);
+    }
+
+    .subhead{
+      margin: .55rem 0 0;
+      font-weight: 650;
+      letter-spacing: .01em;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 2px 14px rgba(0,0,0,.4);
+      font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+    }
+
+    main{
+      margin-top: 1.25rem;
+      display:grid;
+      gap: 1.25rem;
+    }
+
+    .card{
+      background: var(--paper);
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 18px;
+      padding: 1.25rem 1.25rem 1.1rem;
+      box-shadow: 0 18px 60px var(--shadow);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .portrait{
+      display:block;
+      width: min(78%, 760px);
+      max-width: 100%;
+      height:auto;
+      margin: 0 auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.35);
+      box-shadow: 0 14px 40px rgba(0,0,0,.35);
+      background: var(--paper-strong);
+    }
+
+    .meta{
+      margin: 0 0 .9rem;
+      font-weight: 800;
+      letter-spacing: .01em;
+      font-size: 1.15rem;
+      opacity: .92;
+    }
+
+    .letter-list{
+      margin: 0;
+      padding-left: 1.2rem;
+      line-height: 1.8;
+      font-size: 1.04rem;
+    }
+
+    .letter-list a{
+      color: #163a70;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .letter-list a:hover{
+      text-decoration: underline;
+    }
+
+    .backlink{
+      display:inline-block;
+      margin-top: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 2px 14px rgba(0,0,0,.4);
+    }
+
+    .backlink:hover{ text-decoration: underline; }
+
+    @media (max-width: 720px){
+      .card{ padding: 1rem; }
+      .portrait{ width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <div class="shell">
+      <header>
+        <h1 class="site-title">IslandLetters.com</h1>
+        <div class="subhead">Ned (E.A.) Harris Letters</div>
+        <a class="backlink" href="index.html">← Back to Home</a>
+      </header>
+
+      <main>
+        <section class="card" aria-label="Portrait of Ned Harris">
+          <img class="portrait"
+               src="images/edharris.jpeg"
+               alt="Portrait of Ned (E.A.) Harris" />
+        </section>
+
+        <section class="card" aria-label="Ned Harris letters list">
+          <p class="meta">Letters by Ned (E.A.) Harris</p>
+
+          <ul class="letter-list">
+            <li><a href="nedharris21011882.html">January 21, 1882</a></li>
+            <li><a href="nedharris29011882.html">January 29, 1882</a></li>
+            <li><a href="nedharris26021882.html">February 26, 1882</a></li>
+            <li><a href="nedharris28021882.html">February 28, 1882</a></li>
+            <li><a href="nedharris12031882.html">March 12, 1882</a></li>
+            <li><a href="nedharris19031882.html">March 19, 1882</a></li>
+            <li><a href="nedharris09041882.html">Easter Day, 1882</a></li>
+            <li><a href="nedharris2041882.html">April 2, 1882</a></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
